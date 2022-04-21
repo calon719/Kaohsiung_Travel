@@ -1,0 +1,193 @@
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.topBtn{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    bottom: 100px;
+    right: 200px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    background: url(../images/Hero.png);
+    position: relative;
+    h1{
+        font-size: 40px;
+        color: $primary;
+        margin-top: 89px;
+    }
+    select{
+        width: 450px;
+        height: 45px;
+        background: url(../images/icons_down.png) 425px no-repeat;
+        background-color: rgba(255,255,255,0.70);
+        border: 3px solid $primary;
+        border-radius: 3px;
+        padding-left: 1em;
+        font-weight: bold;
+        margin-top: 96px;
+        cursor: pointer;
+    }
+    .hot{
+        width: 800px;
+        background: $primary;
+        position: absolute;
+        bottom: -80px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+        padding-bottom: 18px;
+        h3{
+            margin-top: 20px;
+            margin-left: 26px;
+            margin-bottom: 10px;
+            font-size: $font-normal;
+        }
+        div{
+            height: 42px;
+            padding-right: 51px;
+            padding-left: 51px;
+        }
+        .hot-list{
+            display: flex;
+            padding: 14px 60px;
+            div{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+            a{
+                text-decoration: none;
+                color: $primary;
+                padding: 11px 34px;
+                border-radius: 5px;
+                margin-right: 25px;
+                &:hover{
+                    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.50);
+                }
+            }
+            a[data-num="0"]{
+                background: $tertiary;
+            }
+            a[data-num="1"]{
+                background: #FFA782;
+            }
+            a[data-num="2"]{
+                background: #F5D005;
+            }
+            a[data-num="3"]{
+                background: $secondary;
+            }
+            a[data-num="4"]{
+                background: #a3a3a3;
+                margin-right: 0;
+            }
+        }
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content-line{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid $secondary;
+        margin-top: 121px;
+        margin-bottom: 65px;
+        padding: 3px 2px 0 2px;
+        position: relative;
+        &:after, &:before{
+            content:'-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -';
+            width: 438px;
+            color: $secondary;
+            position: absolute;
+            top: -2px;
+        }
+        &:after{
+            right: 15px;
+        }
+        &::before{
+            left: 28px;
+        }
+    }
+    h2{
+        font-size: 36px;
+        color: $tertiary;
+    }
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-bottom: 49px;
+    }
+    .card{
+        width: 49%;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+        margin-top: 36px;
+        .card-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 155px;
+            color: $primary;
+            padding: 0 22px 14px 22px;
+            background-size: 100% !important; 
+            background-position:center !important;
+            h4{
+                font-size: $font-large;
+            }
+        }
+        .card-txt{
+            position: relative;
+            padding: 3px 0 20px 23px;
+            p{
+                margin-top: 12px;
+                line-height: 1.5;
+            }
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+    .page{
+        display: flex;
+        margin-bottom: 39px;
+        a{
+            display: block;
+            padding: 8px;
+            margin-left: 8px;
+            text-decoration: none;
+            color: #4A4A4A;
+            &:hover{
+                color: $secondary;
+            }
+        }
+        .page-now{
+            color: $secondary;
+        }
+    }
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $secondary;
+    padding: 24px;
+    line-height: 1.5;
+    p{
+        font-size: $font-small;
+    }
+    span{
+        color: #FFD366;
+    }
+}
